@@ -1,9 +1,9 @@
-# Terra Node DAppNode package
+# Akash Network DAppNode package
 
 [![DAppNodeStore Available](https://img.shields.io/badge/DAppNodeStore-Available-brightgreen.svg)](http://my.dappnode/#/installer/akash-network.public.dappnode.eth)
 
 
-[![Terra-Node github](https://img.shields.io/badge/TerraNode-Github-blue.svg)](https://github.com/terra-project/core)
+[![Akash-Network github](https://img.shields.io/badge/AkashNetwork-Github-blue.svg)](https://github.com/ovrclk/akash)
 
 You can use this package without installing it in your DAppNode following these instructions:
 
@@ -46,11 +46,8 @@ You can use this package without installing it in your DAppNode following these 
 
 You can edit the `docker-compose.yml` and add extra options, such as:
 ```
- <TODO:// list all Terra options>
+ <TODO:// list all akash options>
 ```
-
-## Connect using [Terra Station](https://todo/)
-TODO://how do you connect?
 
 ## License
 
