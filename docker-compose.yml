@@ -1,0 +1,39 @@
+version: "3.4"
+services:
+  chain:
+    build:
+      args:
+        UPSTREAM_VERSION: master
+      context: ./build
+      dockerfile: Dockerfile
+    environment:
+      - AKASH_MINIMUM_GAS_PRICES=0.025uakt
+      - AKASH_HALT_HEIGHT=
+      - AKASH_HALT_TIME=
+      - AKASH_INTER_BLOCK_CACHE=
+      - AKASH_PRUNING=
+      - AKASH_HOME=
+      - AKASH_MONIKER=DAPPNodler
+      - AKASH_LOG_LEVEL=info
+      - AKASH_P2P_EXTERNAL_ADDRESS=${_DAPPNODE_GLOBAL_HOSTNAME}
+      - AKASH_P2P_LADDR=tcp://0.0.0.0:26656
+      - AKASH_RPC_LADDR=tcp://0.0.0.0:26657
+      - AKASH_RPC_GRPC_MAX_OPEN_CONNECTIONS=3
+      - AKASH_RPC_MAX_OPEN_CONNECTIONS=3
+      - AKASH_RPC_UNSAFE=false
+      - AKASH_FASTSYNC_VERSION=v2
+      - NETWORK=mainnet
+      - CHAIN_ID=akashnet-2
+      - AKASH_FAST_SYNC=true
+#      - PROMETHEUS_LISTEN_ADDR=56660
+#      - PROMETHEUS="true"
+    restart: always
+    ports:
+      - "56656:26656"
+      - "56657:26657"
+      - "5317:1317"
+    volumes:
+      - "chain_data:/.akash"
+    image: "akash-network.public.dappnode.eth:0.1.0"
+volumes:
+  chain_data: {}

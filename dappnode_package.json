@@ -1,0 +1,46 @@
+{
+  "name": "akash-network.public.dappnode.eth",
+  "version": "0.1.0",
+  "upstreamVersion": "master",
+  "upstreamRepo": "ovrclk/akash",
+  "upstreamArg": "UPSTREAM_VERSION",
+  "description": "",
+  "type": "service",
+  "author": "androolloyd <opensource@andrewredden.com> (https://github.com/androolloyd)",
+  "contributors": [
+    "akash-devs (https://github.com/ovrclk)"
+  ],
+  "categories": [
+    "Developer tools", "Blockchain", "Communications"
+  ],
+  "keywords": [
+    "akash"
+  ],
+  "globalEnvs": {
+    "all": true
+  },
+  "backup": [
+    {
+      "name": "node_key.json",
+      "path": "/.akash/config/node_key.json",
+    },
+    {
+      "name": "priv_validator_key.json",
+      "path": "/.akash/config/priv_validator_key.json",
+    },
+    {
+      "name": "priv_validator_state.json",
+      "path": "/.akash/data/priv_validator_state.json",
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/androolloyd/docker-akash-network"
+  },
+  "links": {
+    "homepage": "https://terra.money",
+    "gateway": "http://akash-network.public.dappnode:56657",
+    "api": "http://akash-network.public.dappnode:5317"
+  },
+  "license": "GPL v3"
+}

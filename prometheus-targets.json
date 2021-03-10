@@ -1,0 +1,20 @@
+[
+  {
+    "labels": {
+      "job": "akash-network.public.dappnode.eth",
+      "service": "chain.akash-network.public.dappnode"
+    },
+    "targets": [
+      "chain.akash-network.public.dappnode:56660"
+    ]
+  },
+  {
+    "labels": {
+      "job": "akash-network.public.dappnode.eth",
+      "service": "api.akash-network.public.dappnode"
+    },
+    "targets": [
+      "api.akash-network.public.dappnode:26660"
+    ]
+  }
+]
